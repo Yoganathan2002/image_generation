@@ -1,0 +1,198 @@
+/* Add a background gradient */
+body {
+  background: linear-gradient(135deg, #e4e6e5e1 20%, #facaa1 100%);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+
+/* Card styling for the login */
+.Login-container {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: flex-start; /* Align content towards the top */
+  width: 100%;
+  padding-left: 100px;
+  margin-top: 180px; /* Adjust this value to move the card vertically */
+}
+
+
+.Login {
+  background-color: #084f5c98;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px rgba(0, 7, 8, 0.973);
+  padding: 40px;
+  max-width: 370px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Styling for the 3D model container */
+.model-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  height: 400px;
+}
+
+/* Glowing effect for Login text */
+.H1 {
+  margin: 2.5px;
+  font-size: 2.1rem;
+  color: #f3fdfcec;
+  animation: glow 1.2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #f1cece, 0 0 10px #ffffff, 0 0 15px #02110e, 0 0 20px #00ffcc, 0 0 25px #00ffcc, 0 0 30px #00ffcc, 0 0 35px #00ffcc;
+  }
+  100% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc;
+  }
+}
+
+/* Blinking effect for email and password labels */
+h3.E, h3.P {
+  color: #ffffff;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  text-align: left;
+  animation: blink 1.9s infinite;
+}
+
+.U {
+  margin-top: 40px;
+}
+
+.textarea-username {
+  padding: 10px;
+  background-color: #c0c3c5;
+  border-style: dashed;
+  text-align: center;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 0.7;
+  }
+}
+
+/* Style for textarea fields */
+.textarea-email,
+.textarea-password {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #fcbec3;
+  border-radius: 7px;
+  font-size: 1rem;
+  margin-top: -10px;
+  margin-bottom: -1px;
+  resize: none;
+  box-sizing: border-box;
+  background-color: #fce6e6bb;
+  color: #000;
+}
+
+/* Style buttons with hover effects */
+.login-btn {
+  background-color: #fde4e4;
+  border: none;
+  color: #fd3636d3;
+  padding: 9px 10px;
+  text-align: center;
+  font-size: 16px;
+  margin: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: hsl(145, 77%, 71%);
+}
+
+.Submit {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.Back {
+  padding: 8px 17px;
+}
+
+.Try {
+  padding: 8px 17px;
+}
+
+.Back:hover {
+  background-color: hsl(145, 55%, 48%);
+}
+
+.OTP {
+  padding: 7px;
+  margin-top: 28px;
+  margin-left: -70px;
+  border-radius: 10px;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.floating-text {
+  position: absolute; /* Position it absolutely */
+  top: 30%; /* Adjust the position as needed */
+  left: 800px;
+  width: 699px;
+  transform: translateX(-50%);
+  font-size: 5.5rem; /* Adjust the font size */
+  color: #cf0d0dad; /* Change to your desired color */
+  animation: float 3s ease-in-out infinite; /* Floating animation */
+  z-index: -3;
+  animation: glow 1.2s infinite alternate;
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fcb5b5, 0 0 10px #c9d9e6, 0 0 15px #130109, 0 0 20px #00ffcc, 0 0 25px #00ffcc, 0 0 30px #00ffcc, 0 0 35px #00ffcc;
+  }
+  100% {
+    text-shadow: 0 0 5px #f7fcfa, 0 0 10px #0a0a0a49, 0 0 15px #0c3455ce, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px); /* Move up */
+  }
+}
+
+/* Make the login card and layout responsive */
+@media (max-width: 600px) {
+  .Login-content {
+    flex-direction: column;
+  }
+
+  .model-container {
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .Login {
+    max-width: 100%;
+  }
+}

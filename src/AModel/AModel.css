@@ -1,0 +1,32 @@
+/* Style for the 3D model card */
+.Model-card {
+    background-color: #d5e6e2ef; /* Semi-transparent light color */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 8px 16px rgba(234, 238, 238, 0.973); /* Soft shadow */
+    padding: 15px; /* Adjust padding as needed */
+    max-width: 300px; /* Maximum width of the card */
+    height: 60vh; /* Set height to 60% of the viewport height */
+    margin-top: -60vh; /* Negative margin for positioning */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    position: fixed; /* Fix position on the screen */
+    right: 20px; /* Space from the right edge */
+    z-index: 0; /* Ensure it is on top of other elements */
+}
+
+/* Placeholder styling for 3D model content */
+.Model-content {
+    width: 100%; /* Use full width for content */
+    height: 100%; /* Use full height for content */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    z-index: 1;
+}
+
+/* Ensure the canvas fits within the model card */
+.Model-canvas {
+    width: 100%; /* Full width of the canvas */
+    height: 100%; /* Full height of the canvas */
+}
